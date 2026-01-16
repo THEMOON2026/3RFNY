@@ -1,31 +1,6 @@
 name = "3rfny"
-type = "javascript"
+main = "index.js"
 compatibility_date = "2026-01-16"
-
-[env.production]
-routes = [
-  { pattern = "arfny.mohamedkanon66.workers.dev", zone_name = "mohamedkanon66.workers.dev" }
-]
-
-[build]
-command = ""
-cwd = "./"
-watch_paths = ["**/*.{js,css,html,png,jpg,jpeg,gif,svg}"]
-
-[[build.upload.rules]]
-type = "Text"
-globs = ["**/*.html", "**/*.css", "**/*.js", "**/*.svg"]
-fallthrough = true
-
-[[build.upload.rules]]
-type = "CompiledContentType"
-globs = ["**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.gif"]
-fallthrough = true
-
-[[build.upload.rules]]
-type = "CompiledContentType"
-globs = ["**/*.woff", "**/*.woff2", "**/*.ttf", "**/*.eot"]
-fallthrough = true
 
 [site]
 bucket = "."
